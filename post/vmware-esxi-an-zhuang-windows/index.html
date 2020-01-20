@@ -3,7 +3,7 @@
         <head>
         <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no" />
         <meta charset="utf-8">
-        <title>rdf | blockAny&#39;s blog</title>
+        <title>Vmware ESXI 安装Windows | blockAny&#39;s blog</title>
         <link rel="stylesheet" href="http://blog.blockany.ml/styles/main.css">
         <link rel="stylesheet" href="https://at.alicdn.com/t/font_1306644_jwtuc2zzbrd.css">
         <link href="https://cdn.bootcss.com/animate.css/3.7.2/animate.min.css" rel="stylesheet">
@@ -56,9 +56,62 @@
                 <div class="mdui-row">
                         <div class="mdui-col-md-8 mdui-col-offset-md-2 ">
                                 <article class="mdui-p-a-2 post animated fadeIn" style="animation-delay: 0.8s;animation-duration: 2s">
-                                    <div class="post-title  mdui-m-b-1">rdf</div>
-                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2020-01-20 18:32:48">2020-01-20 / 1 min read</div>
-                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><p>xcvdgvcfdsv</p>
+                                    <div class="post-title  mdui-m-b-1">Vmware ESXI 安装Windows</div>
+                                    <div class="mdui-typo-body-2 mdui-m-b-2" datetime="2020-01-20 21:01:39">2020-01-20 / 2 min read</div>
+                                    <div class="mdui-m-b-2 mdui-typo post-neirong"><h2 id="vmware-esxi-安装windows">Vmware ESXI 安装Windows</h2>
+<hr>
+<pre><code>&gt;ESXi专为运行虚拟机、最大限度降低配置要求和简化部署而设计。只需几分钟时间，客户便可完成从安装到运行虚拟机的全过程，特别是在下载并安装预配置虚拟设备的时候。
+</code></pre>
+<h4 id="登陆web管理界面">登陆Web管理界面</h4>
+<hr>
+<p>进入系统后，会在黄色区域显示一个ip地址（前提是你插好了网线）如图1-1。<br>
+<img src="https://i.loli.net/2019/11/30/pO2rfag7C9tynuK.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图1-1</p>
+</blockquote>
+<p>然后打开这个网页，会出现图1-2的界面。<br>
+<img src="https://i.loli.net/2019/11/30/K4fmvUp1BD62yMr.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图1-2</p>
+</blockquote>
+<p>输入安装时填写的用户名密码，登陆成功，会显示图1-3的界面。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2019/11/30/CbTgdlDMyrvfxBA.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>↑图1-3</p>
+</blockquote>
+<h4 id="创建一个虚拟机">创建一个虚拟机</h4>
+<hr>
+<p>首先点击“创建/注册虚拟机”，如图2-1<br>
+<img src="https://i.loli.net/2019/11/30/KjGvlEPMLQNo49C.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图2-1</p>
+</blockquote>
+<p>点击“下一页”，输入虚拟机的名称、操作系统、版本。<br>
+再点击“下一页”，存储空间默认就行，不用动它。然后“下一页。”<br>
+这里配置到服务器的一半，例如我的服务器4G内存，4核心CPU，就可以按照图2-2配置。<br>
+<img src="https://s2.ax1x.com/2019/11/30/QZ33vj.png" alt="QZ33vj.png" loading="lazy"></p>
+<blockquote>
+<p>↑图2-2</p>
+</blockquote>
+<p>然后点击“完成”，一个虚拟机就创建好了。</p>
+<h5 id="问题来了该如何使用它呢">问题来了：该如何使用它呢？</h5>
+<hr>
+<blockquote>
+<p>使用虚拟机其实很简单。就和平常使用VMware虚拟机差不多。</p>
+</blockquote>
+<p>在主界面，点击“虚拟机”再点击你刚刚创建的虚拟机，就会显示图3-1的界面。<br>
+<img src="https://i.loli.net/2019/11/30/Jxo46YnRikjWdr9.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图3-1</p>
+</blockquote>
+<p>点击“打开电源”，看！虚拟机启动了。<br>
+<img src="https://s2.ax1x.com/2019/11/30/QZ86Sg.md.png" alt="QZ86Sg.png" loading="lazy"></p>
+<blockquote>
+<p>↑图3-2</p>
+</blockquote>
+<p>然后就可以享用Windows啦~</p>
+<hr>
+<h2 id="下期在esxi上安装dsm">下期：在ESXI上安装DSM</h2>
 </div>
                                     <div class="mdui-divider mdui-m-b-2"></div>
                                     <div class="mdui-row-xs-2 post-fenye">
@@ -73,6 +126,31 @@
                                    
                                     <div class="mdui-divider mdui-m-t-2 mdui-m-b-2"></div>
                                     
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '',
+    clientSecret: '',
+    repo: '',
+    owner: '',
+    admin: [''],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+          
+        
                                      <script src="http://blog.blockany.ml/media/scripts/Valine.min.js"></script>
  <div class="comment"></div>
 
