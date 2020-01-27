@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.blockany.ml</id>
     <title>blockAny&apos;s blog</title>
-    <updated>2020-01-20T13:41:02.052Z</updated>
+    <updated>2020-01-27T13:52:32.684Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.blockany.ml"/>
     <link rel="self" href="http://blog.blockany.ml/atom.xml"/>
@@ -10,6 +10,35 @@
     <logo>http://blog.blockany.ml/images/avatar.png</logo>
     <icon>http://blog.blockany.ml/favicon.ico</icon>
     <rights>All rights reserved 2020, blockAny&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[关于Android客户端]]></title>
+        <id>http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan</id>
+        <link href="http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan">
+        </link>
+        <updated>2020-01-27T13:07:43.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="blockany-android客户端-v02">blockAny Android客户端 v0.2😄</h3>
+<h4 id="最新版本02beta-06a">最新版本：0.2beta-06a</h4>
+<hr>
+<p>支持系统：</p>
+<pre><code>Android 10（Q）
+Android 9 （P）
+Android 8（O）
+Android 7（N）
+Android 6（M）
+Android 5 （L）
+Android 4.4（K）
+Android 4.4 以下版本未测试
+</code></pre>
+<p>APP制作：Fusion APP<br>
+测试图：<br>
+<img src="https://i.loli.net/2020/01/27/tLq3JmriIeURs9W.png" alt="主页" loading="lazy"><br>
+<img src="https://i.loli.net/2020/01/27/pKaet1VJ7PvdXrc.png" alt="归档" loading="lazy"><br>
+<img src="https://i.loli.net/2020/01/27/lUTQD6E9kSAKxZW.png" alt="标签" loading="lazy"><br>
+<img src="https://i.loli.net/2020/01/27/dieFRf4DhkO78yC.png" alt="整合包" loading="lazy"><br>
+<img src="https://i.loli.net/2020/01/27/GBYjlmk5P9s2hX6.png" alt="标签栏" loading="lazy"><br>
+😖😊</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Vmware ESXI 安装Windows]]></title>
         <id>http://blog.blockany.ml/post/vmware-esxi-an-zhuang-windows</id>
