@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.blockany.ml</id>
     <title>blockAny&apos;s blog</title>
-    <updated>2020-01-31T02:27:01.519Z</updated>
+    <updated>2020-01-31T02:27:46.260Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.blockany.ml"/>
     <link rel="self" href="http://blog.blockany.ml/atom.xml"/>
@@ -31,7 +31,8 @@ https://github.com/ra1nstorm/ra1nstorm-helper/releases</p>
 <p>转到资产并下载ra1nstorm.run，将其下载到桌面上。<br>
 开放终端<br>
 输入以下命令：<br>
-cd Desktopsudo bash ralnstorm.run</p>
+cd Desktop<br>
+sudo bash ralnstorm.run</p>
 <p>将会弹出一个屏幕，它将作为您的说明屏幕。<br>
 （注意：在屏幕上遵循所有说明）<br>
 （注意：如果运行时出错，请询问Ra1nStorm Discord或在RainStorm Github上发送问题）<br>
