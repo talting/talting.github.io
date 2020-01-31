@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Vmware ESXI 安装Windows | blockAny&#39;s blog</title>
+<title>Windows 安装Xubuntu并运行Checkra1n越狱iPhone | blockAny&#39;s blog</title>
 <meta name="description" content="blockAny 个人博客" />
 <link rel="shortcut icon" href="http://blog.blockany.ml/favicon.ico">
 <link rel="stylesheet" href="http://blog.blockany.ml/styles/main.css">
@@ -77,7 +77,7 @@
         <div class="center content">
           <div class="featured-image cover" style="background-image: url('http://blog.blockany.ml/media/images/gridea.jpg');">
             <div class="meta top"> 
-              <time class="meta-info" style="float:left;" datetime="2020-01-20"><i class="fa fa-calendar"></i><span class="lately">11 天前</span></time>
+              <time class="meta-info" style="float:left;" datetime="2020-01-31"><i class="fa fa-calendar"></i><span class="lately">6 分钟前</span></time>
                
                
             </div>
@@ -85,7 +85,7 @@
               <div class="tags ">
                 
               </div>
-              <h1 class="title ularge white bold">Vmware ESXI 安装Windows</h1>
+              <h1 class="title ularge white bold">Windows 安装Xubuntu并运行Checkra1n越狱iPhone</h1>
             </div>
           </div>
         </div>  
@@ -95,60 +95,44 @@
             <article class="main-article post">
               <section class="post-content">
                 <div class="text">
-                  <h2 id="vmware-esxi-安装windows">Vmware ESXI 安装Windows</h2>
-<hr>
-<pre><code>&gt;ESXi专为运行虚拟机、最大限度降低配置要求和简化部署而设计。只需几分钟时间，客户便可完成从安装到运行虚拟机的全过程，特别是在下载并安装预配置虚拟设备的时候。
-</code></pre>
-<h4 id="登陆web管理界面">登陆Web管理界面</h4>
-<hr>
-<p>进入系统后，会在黄色区域显示一个ip地址（前提是你插好了网线）如图1-1。<br>
-<img src="https://i.loli.net/2019/11/30/pO2rfag7C9tynuK.png" alt="" loading="lazy"></p>
-<blockquote>
-<p>↑图1-1</p>
-</blockquote>
-<p>然后打开这个网页，会出现图1-2的界面。<br>
-<img src="https://i.loli.net/2019/11/30/K4fmvUp1BD62yMr.png" alt="" loading="lazy"></p>
-<blockquote>
-<p>↑图1-2</p>
-</blockquote>
-<p>输入安装时填写的用户名密码，登陆成功，会显示图1-3的界面。</p>
-<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2019/11/30/CbTgdlDMyrvfxBA.png" alt="" loading="lazy"></figure>
-<blockquote>
-<p>↑图1-3</p>
-</blockquote>
-<h4 id="创建一个虚拟机">创建一个虚拟机</h4>
-<hr>
-<p>首先点击“创建/注册虚拟机”，如图2-1<br>
-<img src="https://i.loli.net/2019/11/30/KjGvlEPMLQNo49C.png" alt="" loading="lazy"></p>
-<blockquote>
-<p>↑图2-1</p>
-</blockquote>
-<p>点击“下一页”，输入虚拟机的名称、操作系统、版本。<br>
-再点击“下一页”，存储空间默认就行，不用动它。然后“下一页。”<br>
-这里配置到服务器的一半，例如我的服务器4G内存，4核心CPU，就可以按照图2-2配置。<br>
-<img src="https://s2.ax1x.com/2019/11/30/QZ33vj.png" alt="QZ33vj.png" loading="lazy"></p>
-<blockquote>
-<p>↑图2-2</p>
-</blockquote>
-<p>然后点击“完成”，一个虚拟机就创建好了。</p>
-<h5 id="问题来了该如何使用它呢">问题来了：该如何使用它呢？</h5>
-<hr>
-<blockquote>
-<p>使用虚拟机其实很简单。就和平常使用VMware虚拟机差不多。</p>
-</blockquote>
-<p>在主界面，点击“虚拟机”再点击你刚刚创建的虚拟机，就会显示图3-1的界面。<br>
-<img src="https://i.loli.net/2019/11/30/Jxo46YnRikjWdr9.png" alt="" loading="lazy"></p>
-<blockquote>
-<p>↑图3-1</p>
-</blockquote>
-<p>点击“打开电源”，看！虚拟机启动了。<br>
-<img src="https://s2.ax1x.com/2019/11/30/QZ86Sg.md.png" alt="QZ86Sg.png" loading="lazy"></p>
-<blockquote>
-<p>↑图3-2</p>
-</blockquote>
-<p>然后就可以享用Windows啦~</p>
-<hr>
-<h2 id="下期在esxi上安装dsm">下期：在ESXI上安装DSM</h2>
+                  <p>对于Windows用户：</p>
+<p>下载setup.exe</p>
+<p>运行它，它将下载Xubuntu，等待完成。<br>
+完成后，打开Xubuntu安装程序。<br>
+打开Xubuntu安装程序后，选择64GB选项，然后安装。<br>
+安装后，在BIOS上运行启动。输入计算机的BIOS（可能在引导时为F12）。对于计算机，请查阅计算机手册中有关如何使用BIOS进行引导的信息。<br>
+在BIOS中，禁用SECURE BOOT，如果在BIOS中显示，则启用VT-D和VT-X。注意：如果未显示，则已启用。<br>
+重新启动计算机并在Xubuntu中启动。（注意：请参阅计算机的用户手册，以了解如何引导至其他操作系统）<br>
+设置Xubuntu，现在您有了Xubuntu。（Linux在Windows上运行）。第二阶段</p>
+<p>一旦在Xubuntu中启动或已经拥有Unbuntu，请进入Firefox。<br>
+去<br>
+https://github.com/ra1nstorm/ra1nstorm-helper/releases</p>
+<p>转到资产并下载ra1nstorm.run，将其下载到桌面上。<br>
+开放终端<br>
+输入以下命令：<br>
+cd Desktopsudo bash ralnstorm.run</p>
+<p>将会弹出一个屏幕，它将作为您的说明屏幕。<br>
+（注意：在屏幕上遵循所有说明）<br>
+（注意：如果运行时出错，请询问Ra1nStorm Discord或在RainStorm Github上发送问题）<br>
+（注意：根据您的互联网连接情况，有些下载会花费一些时间。请耐心等待）<br>
+看到KVM屏幕后，屏幕上将显示CLover Boot，然后用键盘选择macOS Installer。它将引导进入安装程序。<br>
+进入macOS安装程序后，在说明屏幕上，按照说明进行操作。<br>
+（注意：安装可能需要一些时间，请耐心等待。）<br>
+一旦完成macOS安装，请插入iPhone并断开iPhone以外的所有其他USB的连接。<br>
+按照“说明”屏幕上的最后一步。（注意：这非常重要，请按照说明进行操作）<br>
+设置Mac。<br>
+完成后，完成说明屏幕并重新启动计算机。<br>
+重新启动进入Xubuntu。<br>
+第三阶段</p>
+<p>进入您的终端。<br>
+在进行下一步之前，请先插入iPhone并保持插入状态。<br>
+输入以下命令：<br>
+sudo bash（然后在终端上将文件拖到名为“ BootVM sh”的桌面上）</p>
+<p>您现在将进入KVM屏幕<br>
+正常登录。<br>
+下载Checkra1n</p>
+<p>并打开它。<br>
+大功告成</p>
 
                 </div>
                 <div class="clear"></div>
@@ -158,7 +142,8 @@
 
             <section class="related section">
               
-              <article class="prev grid-50 tablet-grid-50 grid-parent">
+              
+              <article class="next grid-50 tablet-grid-50 grid-parent">
                 <div class="thumb cover lazy loaded" style="background-image: url('http://blog.blockany.ml/media/images/gridea.jpg');"></div>
                  <a href="http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan" class="full-link"></a>
                  <div class="info">
@@ -166,11 +151,10 @@
                   <h4 class="title white no-margin">关于Android客户端</h4>
                 </div>
                  <span class="epcl-button red">
-                  <img src="http://blog.blockany.ml/media/images/left-arrow.svg" width="15" alt="Left Arrow">
+                  <img src="http://blog.blockany.ml/media/images/right-arrow.svg" width="15" alt="Left Arrow">
                 </span>
                 <div class="overlay"></div>
               </article>
-              
               
 
                 <div class="clear"></div>

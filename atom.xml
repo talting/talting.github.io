@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.blockany.ml</id>
     <title>blockAny&apos;s blog</title>
-    <updated>2020-01-27T13:52:32.684Z</updated>
+    <updated>2020-01-31T02:25:28.929Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.blockany.ml"/>
     <link rel="self" href="http://blog.blockany.ml/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>http://blog.blockany.ml/images/avatar.png</logo>
     <icon>http://blog.blockany.ml/favicon.ico</icon>
     <rights>All rights reserved 2020, blockAny&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Windows 安装Xubuntu并运行Checkra1n越狱iPhone]]></title>
+        <id>http://blog.blockany.ml/post/windows-an-zhuang-xubuntu-bing-yun-xing-checkra1n-yue-yu-iphone</id>
+        <link href="http://blog.blockany.ml/post/windows-an-zhuang-xubuntu-bing-yun-xing-checkra1n-yue-yu-iphone">
+        </link>
+        <updated>2020-01-31T02:19:46.000Z</updated>
+        <content type="html"><![CDATA[<p>对于Windows用户：</p>
+<p>下载setup.exe</p>
+<p>运行它，它将下载Xubuntu，等待完成。<br>
+完成后，打开Xubuntu安装程序。<br>
+打开Xubuntu安装程序后，选择64GB选项，然后安装。<br>
+安装后，在BIOS上运行启动。输入计算机的BIOS（可能在引导时为F12）。对于计算机，请查阅计算机手册中有关如何使用BIOS进行引导的信息。<br>
+在BIOS中，禁用SECURE BOOT，如果在BIOS中显示，则启用VT-D和VT-X。注意：如果未显示，则已启用。<br>
+重新启动计算机并在Xubuntu中启动。（注意：请参阅计算机的用户手册，以了解如何引导至其他操作系统）<br>
+设置Xubuntu，现在您有了Xubuntu。（Linux在Windows上运行）。第二阶段</p>
+<p>一旦在Xubuntu中启动或已经拥有Unbuntu，请进入Firefox。<br>
+去<br>
+https://github.com/ra1nstorm/ra1nstorm-helper/releases</p>
+<p>转到资产并下载ra1nstorm.run，将其下载到桌面上。<br>
+开放终端<br>
+输入以下命令：<br>
+cd Desktopsudo bash ralnstorm.run</p>
+<p>将会弹出一个屏幕，它将作为您的说明屏幕。<br>
+（注意：在屏幕上遵循所有说明）<br>
+（注意：如果运行时出错，请询问Ra1nStorm Discord或在RainStorm Github上发送问题）<br>
+（注意：根据您的互联网连接情况，有些下载会花费一些时间。请耐心等待）<br>
+看到KVM屏幕后，屏幕上将显示CLover Boot，然后用键盘选择macOS Installer。它将引导进入安装程序。<br>
+进入macOS安装程序后，在说明屏幕上，按照说明进行操作。<br>
+（注意：安装可能需要一些时间，请耐心等待。）<br>
+一旦完成macOS安装，请插入iPhone并断开iPhone以外的所有其他USB的连接。<br>
+按照“说明”屏幕上的最后一步。（注意：这非常重要，请按照说明进行操作）<br>
+设置Mac。<br>
+完成后，完成说明屏幕并重新启动计算机。<br>
+重新启动进入Xubuntu。<br>
+第三阶段</p>
+<p>进入您的终端。<br>
+在进行下一步之前，请先插入iPhone并保持插入状态。<br>
+输入以下命令：<br>
+sudo bash（然后在终端上将文件拖到名为“ BootVM sh”的桌面上）</p>
+<p>您现在将进入KVM屏幕<br>
+正常登录。<br>
+下载Checkra1n</p>
+<p>并打开它。<br>
+大功告成</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[关于Android客户端]]></title>
         <id>http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan</id>
