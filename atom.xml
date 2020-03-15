@@ -2,14 +2,25 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://blog.blockany.ml</id>
     <title>blockAny&apos;s blog</title>
-    <updated>2020-03-15T11:19:42.429Z</updated>
+    <updated>2020-03-15T11:58:37.121Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://blog.blockany.ml"/>
     <link rel="self" href="http://blog.blockany.ml/atom.xml"/>
-    <subtitle>blockAny 个人博客</subtitle>
+    <subtitle>我是Fusion_blockAny，又叫AyCher。 it&apos;s my blog.</subtitle>
     <logo>http://blog.blockany.ml/images/avatar.png</logo>
     <icon>http://blog.blockany.ml/favicon.ico</icon>
     <rights>All rights reserved 2020, blockAny&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[我复活了！！诈尸]]></title>
+        <id>http://blog.blockany.ml/post/wo-fu-huo-liao-zha-shi/</id>
+        <link href="http://blog.blockany.ml/post/wo-fu-huo-liao-zha-shi/">
+        </link>
+        <updated>2020-03-15T11:34:32.000Z</updated>
+        <content type="html"><![CDATA[<p>###欢迎关注B站：Fusion_blockAny<br>
+<img src="http://blog.blockany.ml/post-images/1584273490919.png" alt="" loading="lazy"></p>
+<p>##博客将继续使用。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Windows 安装Xubuntu并运行Checkra1n越狱iPhone]]></title>
         <id>http://blog.blockany.ml/post/chickra1njb/</id>
