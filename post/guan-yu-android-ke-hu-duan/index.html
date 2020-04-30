@@ -5,12 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <title>关于Android客户端 - blockAny&#39;s blog</title>
-<link rel="shortcut icon" href="http://blog.blockany.ml/favicon.ico">
+<link rel="shortcut icon" href="https://blog.blockany.ml/favicon.ico">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
-<link rel="stylesheet" href="http://blog.blockany.ml/media/css/tailwind.css">
-<link rel="stylesheet" href="http://blog.blockany.ml/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="关于Android客户端 - blockAny&#39;s blog - Atom Feed" href="http://blog.blockany.ml/atom.xml">
+<link rel="stylesheet" href="https://blog.blockany.ml/media/css/tailwind.css">
+<link rel="stylesheet" href="https://blog.blockany.ml/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="关于Android客户端 - blockAny&#39;s blog - Atom Feed" href="https://blog.blockany.ml/atom.xml">
 
     
 
@@ -36,8 +36,8 @@ Android 7（N）
 Android 6（M）
 An..." />
   <meta property="og:type" content="articles">
-  <meta property="og:url" content="http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" />
-  <meta property="og:image" content="http://blog.blockany.ml/images/avatar.png">
+  <meta property="og:url" content="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" />
+  <meta property="og:image" content="https://blog.blockany.ml/images/avatar.png">
   <meta property="og:image:height" content="630">
   <meta property="og:image:width" content="1200">
   <meta name="twitter:title" content="关于Android客户端 - blockAny&#39;s blog">
@@ -52,11 +52,13 @@ Android 7（N）
 Android 6（M）
 An...">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="canonical" href="http://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/">
+  <link rel="canonical" href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.css">
  
+  
+    <link rel="stylesheet" href="https://blog.blockany.ml/media/css/prism-atom-dark.css">
   
 
   
@@ -64,7 +66,7 @@ An...">
 
 <body>
   <div class="antialiased flex flex-col min-h-screen" id="app">
-    <a href="http://blog.blockany.ml" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
+    <a href="https://blog.blockany.ml" class="fixed top-0 left-0 mt-4 bg-black text-white dark:text-gray-700 dark:bg-yellow-50 dark:hover:bg-black dark:hover:text-white inline-flex p-2 pl-8 hover:text-gray-700 hover:bg-yellow-50 font-bold z-10 transition-fast animated fadeInLeft">
       blockAny&#39;s blog
     </a>
     <div class="max-w-4xl w-full mx-auto">
@@ -128,11 +130,11 @@ Android 4.4 以下版本未测试
 <script type="application/javascript">
 
   var gitalk = new Gitalk({
-    clientID: '',
-    clientSecret: '',
-    repo: '',
-    owner: '',
-    admin: [''],
+    clientID: 'f00ee772aec52be8e572',
+    clientSecret: '21b9eecbbc70a550db0da5c55408b6a566628bff',
+    repo: 'gitalk',
+    owner: 'talting',
+    admin: ['talting'],
     id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
@@ -246,9 +248,14 @@ Android 4.4 以下版本未测试
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="http://blog.blockany.ml/media/scripts/main.js"></script>
+  <script src="https://blog.blockany.ml/media/scripts/main.js"></script>
   
   <!-- Code Highlight -->
+  
+    <script src="https://blog.blockany.ml/media/prism.js"></script>
+    <script>
+      Prism.highlightAll()
+    </script>
   
 
   <script src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"></script>
@@ -335,7 +342,7 @@ Android 4.4 以下版本未测试
     //初始化
     initImg();
   </script>
-  <script type="application/javascript" src="http://blog.blockany.ml/media/scripts/valine.min.js"></script>
+  <script type="application/javascript" src="https://blog.blockany.ml/media/scripts/valine.min.js"></script>
   <script type="application/javascript">
   
     // var valine = new Valine();
@@ -343,13 +350,13 @@ Android 4.4 以下版本未测试
     //   el: '#vlaine-comment',
     //   appId: '',
     //   appKey: '',
-    //   notify: ,
-    //   avatar: '',
-    //   verify: ,
-    //   placeholder: '',
-    //   visitor: ,
-    //   highlight: ,
-    //   recordIP: ,
+    //   notify: false,
+    //   avatar: 'mp',
+    //   verify: true,
+    //   placeholder: '来都来了，不妨评论一下',
+    //   visitor: true,
+    //   highlight: true,
+    //   recordIP: false,
     // })
   
     var valine = new Valine();
