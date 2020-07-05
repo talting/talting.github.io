@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8" />
+<title>Vmware ESXI 安装Windows - blockAny&#39;s blog</title>
+<meta name="description" content="我是Fusion_blockAny，又叫AyCher。 it&#39;s my blog.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://blog.blockany.ml/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://blog.blockany.ml/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
+</head>
+
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://blog.blockany.ml">
+								<img class="logo"
+									src="https://blog.blockany.ml/media/images/site_avatar.png?v=1593939836551"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
+
+
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1593939836551" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">Vmware ESXI 安装Windows</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-01-20</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <h2 id="vmware-esxi-安装windows">Vmware ESXI 安装Windows</h2>
+<hr>
+<pre><code>&gt;ESXi专为运行虚拟机、最大限度降低配置要求和简化部署而设计。只需几分钟时间，客户便可完成从安装到运行虚拟机的全过程，特别是在下载并安装预配置虚拟设备的时候。
+</code></pre>
+<h4 id="登陆web管理界面">登陆Web管理界面</h4>
+<hr>
+<p>进入系统后，会在黄色区域显示一个ip地址（前提是你插好了网线）如图1-1。<br>
+<img src="https://i.loli.net/2019/11/30/pO2rfag7C9tynuK.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图1-1</p>
+</blockquote>
+<p>然后打开这个网页，会出现图1-2的界面。<br>
+<img src="https://i.loli.net/2019/11/30/K4fmvUp1BD62yMr.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图1-2</p>
+</blockquote>
+<p>输入安装时填写的用户名密码，登陆成功，会显示图1-3的界面。</p>
+<figure data-type="image" tabindex="1"><img src="https://i.loli.net/2019/11/30/CbTgdlDMyrvfxBA.png" alt="" loading="lazy"></figure>
+<blockquote>
+<p>↑图1-3</p>
+</blockquote>
+<h4 id="创建一个虚拟机">创建一个虚拟机</h4>
+<hr>
+<p>首先点击“创建/注册虚拟机”，如图2-1<br>
+<img src="https://i.loli.net/2019/11/30/KjGvlEPMLQNo49C.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图2-1</p>
+</blockquote>
+<p>点击“下一页”，输入虚拟机的名称、操作系统、版本。<br>
+再点击“下一页”，存储空间默认就行，不用动它。然后“下一页。”<br>
+这里配置到服务器的一半，例如我的服务器4G内存，4核心CPU，就可以按照图2-2配置。<br>
+<img src="https://s2.ax1x.com/2019/11/30/QZ33vj.png" alt="QZ33vj.png" loading="lazy"></p>
+<blockquote>
+<p>↑图2-2</p>
+</blockquote>
+<p>然后点击“完成”，一个虚拟机就创建好了。</p>
+<h5 id="问题来了该如何使用它呢">问题来了：该如何使用它呢？</h5>
+<hr>
+<blockquote>
+<p>使用虚拟机其实很简单。就和平常使用VMware虚拟机差不多。</p>
+</blockquote>
+<p>在主界面，点击“虚拟机”再点击你刚刚创建的虚拟机，就会显示图3-1的界面。<br>
+<img src="https://i.loli.net/2019/11/30/Jxo46YnRikjWdr9.png" alt="" loading="lazy"></p>
+<blockquote>
+<p>↑图3-1</p>
+</blockquote>
+<p>点击“打开电源”，看！虚拟机启动了。<br>
+<img src="https://s2.ax1x.com/2019/11/30/QZ86Sg.md.png" alt="QZ86Sg.png" loading="lazy"></p>
+<blockquote>
+<p>↑图3-2</p>
+</blockquote>
+<p>然后就可以享用Windows啦~</p>
+<hr>
+<h2 id="下期在esxi上安装dsm">下期：在ESXI上安装DSM</h2>
+
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/vmware-esxi-an-zhuang-windows/" class="leancloud-visitors view"
+                              data-flag-title="Vmware ESXI 安装Windows">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://blog.blockany.ml/guan-yu-android-ke-hu-duan/" class="title">
+                                      <h4>关于Android客户端</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2020-01-27</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#vmware-esxi-%E5%AE%89%E8%A3%85windows">Vmware ESXI 安装Windows</a><br>
+*
+<ul>
+<li><a href="#%E7%99%BB%E9%99%86web%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2">登陆Web管理界面</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%99%9A%E6%8B%9F%E6%9C%BA">创建一个虚拟机</a>
+<ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%9D%A5%E4%BA%86%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E5%91%A2">问题来了：该如何使用它呢？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8B%E6%9C%9F%E5%9C%A8esxi%E4%B8%8A%E5%AE%89%E8%A3%85dsm">下期：在ESXI上安装DSM</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
+
+    	<div class="layout-footer">
+
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									Powered by <a href="https://github.com/talting" target="_blank">blockAny</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<script type="text/javascript" src='https://blog.blockany.ml/media/scripts/main.js'></script>
+	
+
+  </div>
+</body>
+
+</html>
