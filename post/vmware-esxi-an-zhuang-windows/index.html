@@ -1,52 +1,149 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
-<!-- 必要参数 -->
-<meta charset="utf-8"/>
-<title>Vmware ESXI 安装Windows | blockAny&#39;s blog</title>
-<meta name="keywords" content="关键词"/>
-<meta name="description" content="简述"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:no"/>
-<meta http-equiv="X-UA-Compatible" content="IE=Edge">
-<link rel="shortcut icon" href="favicon.ico">
-<!-- CSS -->
-<link rel="stylesheet" href="https://blog.blockany.ml/media/css/mdui.min.css">
-<link rel="stylesheet" href="https://blog.blockany.ml/media/css/modify.css">
-<link rel="stylesheet" href="https://blog.blockany.ml/media/css/github-gist.min.css">
-<link rel="stylesheet" href="https://blog.blockany.ml/media/css/railscasts.min.css">
+  <meta charset="UTF-8" />
+<title>Vmware ESXI 安装Windows - blockAny&#39;s blog</title>
+<meta name="description" content="我是Fusion_blockAny，又叫AyCher。 it&#39;s my blog.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link type='text/css' rel='stylesheet' href='https://blog.blockany.ml/styles/main.css' media='screen' />
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css">
+<link type="text/css" rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src='https://blog.blockany.ml/media/scripts/jquery.js'></script>
+<script type="text/javascript" src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+</script>
 </head>
-<body id="post" class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
-<header role="banner">
-    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-shadow-0">
-        <div class="mdui-toolbar">
-            <button class="mdui-btn mdui-btn-icon" id="menu" mdui-drawer="{target:'#drawer',overlay:true,swipe:true}"><i class="mdui-icon material-icons">menu</i></button>
-            <a href="https://blog.blockany.ml" class="mdui-typo-headline">blockAny&#39;s blog</a>
-            <div class="mdui-toolbar-spacer"></div>
-            <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '深色样式切换', position: 'left'}" id="DarkStyle"><i class="mdui-icon material-icons">brightness_4</i></button>
-        </div>
-    </div>
-</header>
 
-<nav id="drawer" class="mdui-drawer mdui-drawer-full-height mdui-drawer-close">
-    <ul class="mdui-list">
-        <a href="/" class="menu"><li class="mdui-list-item mdui-ripple">首页</li></a>
-        <a href="/archives" class="menu"><li class="mdui-list-item mdui-ripple">归档</li></a>
-        <a href="/tags" class="menu"><li class="mdui-list-item mdui-ripple">标签</li></a>
-        <a href="/post/about" class="menu"><li class="mdui-list-item mdui-ripple">关于</li></a>
-        
-        <a href="https://github.com/CPlayer-CN/gridea-theme-cplayer-material" class="spread"><li class="mdui-list-item mdui-ripple">主题主页</li></a>
-    </ul>
-</nav>
+<body>
+  <div class="layout theme-dark">
+    <div class="layout-header">
+
+	<div class="layout-header-main">
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+
+					<div class="navbar">
+
+						<div class="logo">
+							<a href="https://blog.blockany.ml">
+								<img class="logo"
+									src="https://blog.blockany.ml/media/images/site_avatar.png?v=1593937720852"
+									alt="">
+							</a>
+						</div>
+
+						<div class="menu d-md-inline-block d-none">
+							<ul class="layout-navigation-list">
+								
+								<li class="layout-navigation-item"><a title="首页"
+										href="/">首页</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="归档"
+										href="/archives">归档</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="标签"
+										href="/tags">标签</a>
+								</li>
+								
+								<li class="layout-navigation-item"><a title="关于"
+										href="/post/about">关于</a>
+								</li>
+								
+							</ul>
+						</div>
+
+						<div class="item d-md-inline-block d-none">
+							<div class="search-icon">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+						</div>
 
 
-<main class="mdui-container mdui-typo mdui-m-t-2">
-    <section class="mdui-card">
-        
-        <div class="mdui-card-primary">
-            <div class="mdui-card-primary-title">Vmware ESXI 安装Windows</div>
-            <div class="mdui-card-primary-subtitle">发布于 2020-01-20，包含标签 。</div>
-        </div>
-        <div class="mdui-card-content"><h2 id="vmware-esxi-安装windows">Vmware ESXI 安装Windows</h2>
+
+						<div class="d-md-inline-block d-none">
+							<div class="search-lightbox">
+								<div class="search-body">
+
+									<form id="gridea-search-form" data-update="1593937720852" action="/search/" class="search-form">
+										<input type="text" name="q" id="s" value="" class="search-field" placeholder="请输入搜索关键词" aria-label="请输入搜索关键词" required="">
+										<button type="submit" class="submit" aria-label="Submit">
+											<i class="fa fa-search" aria-hidden="true"></i>
+										</button>
+									</form>
+
+								</div>
+							</div>
+						</div>
+
+						<div class="nav d-md-none d-inline-block">
+							<div class="trigger">
+								<i class="fa fa-bars layout-btn-toggle" aria-hidden="true"></i>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+
+
+
+		</div>
+	</div>
+
+</div>
+    <div class="layout-collapse d-md-none">
+	<div class="layout-collapse-main">
+		<ul class="layout-collapse-list">
+			
+			<li class="layout-collapse-item"><a title="首页" href="/">首页</a></li>
+			
+			<li class="layout-collapse-item"><a title="归档" href="/archives">归档</a></li>
+			
+			<li class="layout-collapse-item"><a title="标签" href="/tags">标签</a></li>
+			
+			<li class="layout-collapse-item"><a title="关于" href="/post/about">关于</a></li>
+			
+
+		</ul>
+	</div>
+</div>
+
+    <div class="layout-content">
+      <div class="layout-content-main">
+        <div class="container">
+          <div class="row justify-content-lg-center">
+            <div class="col-12 col-lg-9">
+              <div class="layout-post">
+                <div class="layout-post-body">
+                  <div class="row">
+
+                    <div class="col-12 col-lg-10">
+                      <div class="layout-post-main m-right m-md-right">
+                        <div class="layout-post-header">
+                          <h1 class="layout-post-title">Vmware ESXI 安装Windows</h1>
+                          <div class="layout-post-meta">
+                            <div class="item">
+                              
+                            </div>
+                            <div class="item">
+                              <span>2020-01-20</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="layout-post-content">
+                          <div class="layout-post-item">
+                            
+                            <h2 id="vmware-esxi-安装windows">Vmware ESXI 安装Windows</h2>
 <hr>
 <pre><code>&gt;ESXi专为运行虚拟机、最大限度降低配置要求和简化部署而设计。只需几分钟时间，客户便可完成从安装到运行虚拟机的全过程，特别是在下载并安装预配置虚拟设备的时候。
 </code></pre>
@@ -100,65 +197,139 @@
 <p>然后就可以享用Windows啦~</p>
 <hr>
 <h2 id="下期在esxi上安装dsm">下期：在ESXI上安装DSM</h2>
-</div>
-        <div class="mdui-card-header">
-            <img class="mdui-card-header-avatar" src="https://blog.blockany.ml/images/avatar.png">
-            <div class="mdui-card-header-title">blockAny&#39;s blog</div>
-            <div class="mdui-card-header-subtitle">我是Fusion_blockAny，又叫AyCher。 it's my blog.</div>
+
+                          </div>
+                        </div>
+                        <div class="layout-post-social">
+                          <div class="item reader">
+                            <div id="/post/vmware-esxi-an-zhuang-windows/" class="leancloud-visitors view"
+                              data-flag-title="Vmware ESXI 安装Windows">
+                              <span class="post-meta-item-text">阅读 </span>
+                              <span class="leancloud-visitors-count"></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="layout-post-navigation">
+                          <div class="navigation-list">
+                            
+                            <div class="post-card row">
+                              
+                              <div class="card-content col-12">
+                                <div class="card-body">
+                                  <div class="header">
+                                    <a href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" class="title">
+                                      <h4>关于Android客户端</h4>
+                                    </a>
+                                  </div>
+                                  <div class="inner">
+                                    <div class="abstract">
+                                      
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="card-footer">
+                                  <div class="item"><span>上一篇</span></div>
+                                  <div class="item">2020-01-27</div>
+                                </div>
+                              </div>
+                              
+                            </div>
+                            
+                          </div>
+                        </div>
+
+                        <div class="layout-comments"></div>
+                        
+                      </div>
+                    </div>
+
+                    <div class="col-12 col-lg-2 d-none d-lg-block">
+                      <div class="layout-post-sidebar">
+                        <div class="layout-sidebar-item">
+                          <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#vmware-esxi-%E5%AE%89%E8%A3%85windows">Vmware ESXI 安装Windows</a><br>
+*
+<ul>
+<li><a href="#%E7%99%BB%E9%99%86web%E7%AE%A1%E7%90%86%E7%95%8C%E9%9D%A2">登陆Web管理界面</a></li>
+<li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%99%9A%E6%8B%9F%E6%9C%BA">创建一个虚拟机</a>
+<ul>
+<li><a href="#%E9%97%AE%E9%A2%98%E6%9D%A5%E4%BA%86%E8%AF%A5%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E5%AE%83%E5%91%A2">问题来了：该如何使用它呢？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E4%B8%8B%E6%9C%9F%E5%9C%A8esxi%E4%B8%8A%E5%AE%89%E8%A3%85dsm">下期：在ESXI上安装DSM</a></li>
+</ul>
+</li>
+</ul>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
 
-      
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <div class="layout-totop d-none"><i class="fa fa-angle-up" aria-hidden="true"></i></div>
 
-<div id="gitalk-container"></div>
+    	<div class="layout-footer">
 
-<script>
+		<div class="container">
+			<div class="row justify-content-lg-center">
+				<div class="col-12 col-lg-9">
+					<div class="footer">
+						<div class="row">
+							<div class="col-12 col-md-9">
+								<div class="footer-copy">
+									
+									Powered by <a href="https://github.com/talting" target="_blank">blockAny</a>
+									<div class="footer-icp d-none d-sm-inline-block">
+										<span class="px-2">⋅</span>
+										
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 d-none d-md-block">
+								<div class="footer-links">
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-  var gitalk = new Gitalk({
-    clientID: 'f00ee772aec52be8e572',
-    clientSecret: '21b9eecbbc70a550db0da5c55408b6a566628bff',
-    repo: 'gitalk',
-    owner: 'talting',
-    admin: ['talting'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
-    distractionFreeMode: false  // Facebook-like distraction free mode
-  })
+	</div>
 
-  gitalk.render('gitalk-container')
+	<script type="text/javascript" src='https://blog.blockany.ml/media/scripts/main.js'></script>
+	
 
-</script>
-
-            
-
-            
-      
-</main>
-
-<nav class="mdui-container mdui-m-t-2 mdui-m-b-2">
-    <a href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" mdui-tooltip="{content: '上一篇', position: 'right'}"><button class="mdui-btn mdui-btn-icon mdui-btn-dense mdui-color-theme-accent mdui-ripple mdui-m-r-1"><i class="mdui-icon material-icons">arrow_back</i></button>关于Android客户端</a>
-    
-</nav>
-
-<div class="mdui-m-t-2 mdui-text-center mdui-typo">
-    Powered by <a href="https://github.com/talting" target="_blank">blockAny</a>
-</div>
-
-<script src="https://blog.blockany.ml/media/js/jquery.min.js"></script>
-<script src="https://blog.blockany.ml/media/js/mdui.min.js"></script>
-<script src="https://blog.blockany.ml/media/js/modify.js"></script>
-<script src="https://blog.blockany.ml/media/js/highlight.min.js"></script>
-<script src="https://blog.blockany.ml/media/js/lightense.min.js"></script>
-<script>
-// 初始化-高亮代码
-hljs.initHighlightingOnLoad();
-// 初始化-文章图片放大
-window.addEventListener('load', function () {
-    Lightense('#post .mdui-card-content img');
-}, false);
-</script>
-
+  </div>
 </body>
+
 </html>
