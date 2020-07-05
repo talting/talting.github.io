@@ -1,185 +1,82 @@
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!-- 必要参数 -->
+<meta charset="utf-8"/>
 <title>blockAny&#39;s blog</title>
-<link rel="shortcut icon" href="https://blog.blockany.ml/favicon.ico">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"> -->
-<link rel="stylesheet" href="https://blog.blockany.ml/media/css/tailwind.css">
-<link rel="stylesheet" href="https://blog.blockany.ml/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="blockAny&#39;s blog - Atom Feed" href="https://blog.blockany.ml/atom.xml">
-
-    
-
-  <meta name="description" content="我是Fusion_blockAny，又叫AyCher。 it's my blog." />
+<meta name="keywords" content="关键词"/>
+<meta name="description" content="简述"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable:no"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<link rel="shortcut icon" href="favicon.ico">
+<!-- CSS -->
+<link rel="stylesheet" href="https://blog.blockany.ml/media/css/mdui.min.css">
+<link rel="stylesheet" href="https://blog.blockany.ml/media/css/modify.css">
 </head>
-<body>
-  <div class="antialiased flex flex-col min-h-screen" id="app">
-
-    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300" :class="{ 'scroll': scrolled }">
-  <div class="flex justify-end px-4">
-    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
-      <i class="ri-close-line" v-show="showMenu"></i>
-      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+<body id="index" class="mdui-appbar-with-toolbar mdui-theme-primary-blue-grey mdui-theme-accent-blue mdui-theme-layout-dark">
+<header role="banner">
+    <div class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-shadow-0">
+        <div class="mdui-toolbar">
+            <button class="mdui-btn mdui-btn-icon" id="menu" mdui-drawer="{target:'#drawer',overlay:true,swipe:true}"><i class="mdui-icon material-icons">menu</i></button>
+            <a href="https://blog.blockany.ml" class="mdui-typo-headline">blockAny&#39;s blog</a>
+            <div class="mdui-toolbar-spacer"></div>
+            <button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: '深色样式切换', position: 'left'}" id="DarkStyle"><i class="mdui-icon material-icons">brightness_4</i></button>
+        </div>
     </div>
-  </div>
-  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block" :class="`${ showMenu ? 'block' : 'hidden' }`">
-    
-      <a href="/" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        首页
-      </a>
-    
-      <a href="/archives" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        归档
-      </a>
-    
-      <a href="/tags" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        标签
-      </a>
-    
-      <a href="/post/about" target="" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-        关于
-      </a>
-    
-    <a href="https://blog.blockany.ml/atom.xml" target="_blank" class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
-      RSS
-    </a>
-  </nav>
-</div>
-
-    <div class="max-w-4xl w-full mx-auto ">
-      
-        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
-  <div class="flex-1 order-2 md:order-1 md:pr-16">
-    <div class="text-4xl font-bold text-center md:text-left">
-      blockAny&#39;s blog
-    </div>
-    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
-      我是Fusion_blockAny，又叫AyCher。 it's my blog.
-    </div>
-    
-      <div class="mt-8 text-center md:text-left">
-        <a
-          href="/post/about" 
-          arget="_blank"
-          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded"
-        >LET&#39;S TALK!</a>
-      </div>
-    
-    
-      <div class="mt-8 flex items-center">
-        
-          <div class="text-gray-500 mr-2">
-            Follow me 👉
-          </div>
-        
-        
-          
-        
-          
-            
-              <a href="mailto:2507777@126.com" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-mail-line"></i>
-              </a>
-            
-          
-        
-          
-            
-              <a href="https://www.github.com/talting" target="_blank" class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
-                <i class="ri-github-line"></i>
-              </a>
-            
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      </div>
-    
-  </div>
-  <div class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
-    <img class="rounded-full object-cover" src="https://blog.blockany.ml/images/avatar.png?v=1588252025317" alt="blockAny&#39;s blog" width="100%" height="100%">
-  </div>
 </header>
-      
 
-      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+<nav id="drawer" class="mdui-drawer mdui-drawer-full-height mdui-drawer-close">
+    <ul class="mdui-list">
+        <a href="/" class="menu"><li class="mdui-list-item mdui-ripple">首页</li></a>
+        <a href="/archives" class="menu"><li class="mdui-list-item mdui-ripple">归档</li></a>
+        <a href="/tags" class="menu"><li class="mdui-list-item mdui-ripple">标签</li></a>
+        <a href="/post/about" class="menu"><li class="mdui-list-item mdui-ripple">关于</li></a>
         
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+        <a href="https://github.com/CPlayer-CN/gridea-theme-cplayer-material" class="spread"><li class="mdui-list-item mdui-ripple">主题主页</li></a>
+    </ul>
+</nav>
+
+
+<main class="mdui-m-a-2 mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-xl-4 mdui-typo mdui-m-t-2">
     
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://blog.blockany.ml/post/wo-fu-huo-liao-zha-shi/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          我复活了！！诈尸
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-03-15</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        ###欢迎关注B站：Fusion_blockAny
+    <section class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+            
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title"><a href="https://blog.blockany.ml/post/wo-fu-huo-liao-zha-shi/">我复活了！！诈尸</a></div>
+                <div class="mdui-card-primary-subtitle">2020-03-15</div>
+            </div>
+            <div class="mdui-card-content">###欢迎关注B站：Fusion_blockAny
 
 ##博客将继续使用。
-...
-      </div>
-      <a href="https://blog.blockany.ml/post/wo-fu-huo-liao-zha-shi/" class="btn">
-        Read more
-      </a>
-    </div>
-    
-  </div>
+...</div>
+        </div>
+    </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://blog.blockany.ml/post/chickra1njb/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Windows 安装Xubuntu并运行Checkra1n越狱iPhone
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-01-31</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        对于Windows用户：
+    <section class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+            
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title"><a href="https://blog.blockany.ml/post/chickra1njb/">Windows 安装Xubuntu并运行Checkra1n越狱iPhone</a></div>
+                <div class="mdui-card-primary-subtitle">2020-01-31</div>
+            </div>
+            <div class="mdui-card-content">对于Windows用户：
 下载setup.exe
 运行它，它将下载Xubuntu，等待完成。
 完成后，打开Xubuntu安装程序。
 打开Xubuntu安装程序后，选择64GB选项，然后安装。
-安装后，在BIOS上运行启动。输入计算机的BIO...
-      </div>
-      <a href="https://blog.blockany.ml/post/chickra1njb/" class="btn">
-        Read more
-      </a>
-    </div>
-    
-  </div>
+安装后，在BIOS上运行启动。输入计算机的BIO...</div>
+        </div>
+    </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          关于Android客户端
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-01-27</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        blockAny Android客户端 v0.2😄
+    <section class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+            
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title"><a href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/">关于Android客户端</a></div>
+                <div class="mdui-card-primary-subtitle">2020-01-27</div>
+            </div>
+            <div class="mdui-card-content">blockAny Android客户端 v0.2😄
 最新版本：0.2beta-06a
 
 支持系统：
@@ -188,51 +85,57 @@ Android 9 （P）
 Android 8（O）
 Android 7（N）
 Android 6（M）
-An...
-      </div>
-      <a href="https://blog.blockany.ml/post/guan-yu-android-ke-hu-duan/" class="btn">
-        Read more
-      </a>
-    </div>
-    
-  </div>
+An...</div>
+        </div>
+    </section>
 
-  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
-    
-    <div class="flex-1 order-2 md:order-1">
-      <h2 class="text-2xl font-semibold mb-4">
-        <a href="https://blog.blockany.ml/post/vmware-esxi-an-zhuang-windows/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
-          Vmware ESXI 安装Windows
-        </a>
-      </h2>
-      <div class="mb-4 text-xs text-gray-500">2020-01-20</div>
-      <div class="mb-4 text-gray-500 dark:text-gray-300">
-        Vmware ESXI 安装Windows
+    <section class="mdui-col mdui-m-b-2">
+        <div class="mdui-card">
+            
+            <div class="mdui-card-primary">
+                <div class="mdui-card-primary-title"><a href="https://blog.blockany.ml/post/vmware-esxi-an-zhuang-windows/">Vmware ESXI 安装Windows</a></div>
+                <div class="mdui-card-primary-subtitle">2020-01-20</div>
+            </div>
+            <div class="mdui-card-content">Vmware ESXI 安装Windows
 
 &gt;ESXi专为运行虚拟机、最大限度降低配置要求和简化部署而设计。只需几分钟时间，客户便可完成从安装到运行虚拟机的全过程，特别是在下载并安装预配置虚拟设备的时候。
 
 登陆Web管理界面
 
-进...
-      </div>
-      <a href="https://blog.blockany.ml/post/vmware-esxi-an-zhuang-windows/" class="btn">
-        Read more
-      </a>
-    </div>
+进...</div>
+        </div>
+    </section>
+
+</main>
+
+<nav class="mdui-container mdui-m-t-2 mdui-m-b-2">
     
-  </div>
-  
-      </div>
+    
+</nav>
 
-      
-      <footer class="py-12 text-center px-4 md:px-0" v-pre>
-  Powered by <a href="https://github.com/talting" target="_blank">blockAny</a>
-</footer>
+<div class="mdui-m-t-2 mdui-text-center mdui-typo">
+    Powered by <a href="https://github.com/talting" target="_blank">blockAny</a>
+</div>
 
-    </div>
-  </div>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://blog.blockany.ml/media/scripts/main.js"></script>
+<script src="https://blog.blockany.ml/media/js/jquery.min.js"></script>
+<script src="https://blog.blockany.ml/media/js/mdui.min.js"></script>
+<script src="https://blog.blockany.ml/media/js/modify.js"></script>
+<script src="https://blog.blockany.ml/media/js/masonry.pkgd.min.js"></script>
+<script src="https://blog.blockany.ml/media/js/imagesloaded.pkgd.min.js"></script>
+<script>
+// 初始化-文章列表页面瀑布流。
+function masonry() {
+    // 初始化 masonry
+    $('.mdui-row-xs-1').masonry({
+        itemSelector: '.mdui-col',
+        horizontalOrder: true
+    });
+}
+masonry()
+$('.mdui-col').imagesLoaded( function() {
+    masonry()
+});
+</script>
+
 </body>
-
 </html>
